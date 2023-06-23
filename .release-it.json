@@ -1,7 +1,8 @@
 {
   "git": {
     "requireBranch": "master",
-    "commitMessage": "chore: release v${version}"
+    "commitMessage": "chore: release v${version}",
+    "commitArgs": ["-n"]
   },
   "hooks": {
     "before:init": ["git pull"],

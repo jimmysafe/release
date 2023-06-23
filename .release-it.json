@@ -1,7 +1,6 @@
 {
   "git": {
     "requireBranch": "master",
-    "commitArgs": ["--no-verify"],
     "commitMessage": "chore: release v${version}"
   },
   "hooks": {
@@ -17,9 +16,18 @@
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
-      "header": "# Changelog",
       "preset": {
-        "name": "conventionalcommits"
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          }
+        ]
       }
     }
   }

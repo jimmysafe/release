@@ -4,14 +4,13 @@
     "commitMessage": "chore: release v${version}"
   },
   "hooks": {
-    "before:init": ["git pull"],
-    "after:bump": ["npx auto-changelog -p"]
+    "before:init": ["git pull"]
   },
   "github": {
     "release": true
   },
   "npm": {
-    "publish": true
+    "publish": false
   },
   "plugins": {
     "@release-it/conventional-changelog": {
